@@ -1,1 +1,0 @@
-Não adianta implementar no PC o que não consegue resolver no papel. O computador só resolve para você aquilo que você mesmo já resolveu e passou para ele. Por isso, é importante escrever o problema no papel, resolver e, aí sim, passar para o computador.
