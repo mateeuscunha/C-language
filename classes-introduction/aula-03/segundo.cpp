@@ -8,6 +8,22 @@ int main() {
     float real = 5.2;
     cout << real << endl;
 
+    double real2 = 5.2e99;
+    cout << real2 << endl;
+
+    bool booleano = false;
+    cout << booleano << endl;
+
+    char letra = 'b';
+    cout << letra << endl;
+
+    string palavra = "bola";
+    cout << palavra << endl;
+
+    int idade;
+    cout << "Qual sua idade?" << endl;
+    cin >> idade;
+    cout << "Idade: " << idade << endl;
 
     return 0;
 }
