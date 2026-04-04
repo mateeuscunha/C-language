@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -13,7 +12,11 @@ int main() {
         cout << "Informe um numero real(b) e um numero natural(e): " << endl;
         cin >> b >> e;
 
-        int res = pow(b,e);
+        float res = b;
+
+        for(int i=1; i < e; i++) {
+            res *= b;
+        }
     
         cout << "'b' elevado a 'e' vale: " << res << endl;
         
