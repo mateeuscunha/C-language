@@ -33,22 +33,52 @@ int uniao(int conjuntoA[], int conjuntoB[], int conjuntoUniao[2*TAM]) {
 }
 
 int intersecao(int conjuntoA[], int conjuntoB[], int conjuntoIntersecao[TAM]) {
+	int tamanhoI = 0;
 	
+	for (int i = 0; i < TAM; i++) { //varrer A
+		bool estaemB = false;
+		
+		int j = 0;
+		while ((j < TAM) and (not estaemB)) {
+			if (conjuntoA[i] == conjuntoB[j]) { //se for igual, entra
+				estaemB = true;
+			}	
+			j++;
+		}	
+		
+		if (estaemB) { 
+				conjuntoIntersecao[tamanhoI] = conjuntoA[i];
+				tamanhoI++;
+			}
+		
+	}
+		
 	
-	return 0;
+	return tamanhoI;
 }
 
 int diferenca(int conjuntoA[], int conjuntoB[], int conjuntoDiferenca[TAM]) {
+	int tamanhoD = 0;
 	
+	for (int i = 0; i < TAM; i++) { //varrer A
+		bool estaemB = false;
+		
+		int j = 0; //varrer B
+		while ((j < TAM) and (not estaemB)) {
+			if (conjuntoA[i] == conjuntoB[j]) { //se for igual, estaemB true
+				estaemB = true;
+			}	
+			j++;
+		}	
+		
+		if (not estaemB) { 
+				conjuntoDiferenca[tamanhoD] = conjuntoA[i];
+				tamanhoD++;
+			}
+	}
 	
-	return 0;
+	return tamanhoD;
 }
-
-
-
-
-
-
 
 int main() {
 	int conjuntoA[TAM];
