@@ -7,17 +7,19 @@ const int TAM = 5;
 int uniao(int conjuntoA[], int conjuntoB[], int conjuntoUniao[2*TAM]) {
 	int tamanhoU = TAM;
 	
-	for (int i = 0; i < TAM; i++) {
+	for (int i = 0; i < TAM; i++) { //recebe o conjunto A
 		conjuntoUniao[i] = conjuntoA[i];
 	}
 	
-	for (int i = 0; i < TAM; i++) {
+	for (int i = 0; i < TAM; i++) { //recebe o B menos o que ja foi pelo A
 		bool EstaEmA = false;
 		
-		for (int j = 0; j < TAM; j++) {
+		int j = 0;
+		while ((not EstaEmA) and (j < TAM)) {
 			if (conjuntoB[i] == conjuntoA[j]) {
-				EstaEmA = true;
+			EstaEmA = true;
 			}
+			j++;
 		}
 		
 		if (not EstaEmA) {
