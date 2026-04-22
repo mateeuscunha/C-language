@@ -3,9 +3,13 @@
 using namespace std;
 
 int main() {
-  
-  
-  
-  
-  return 0;
+	int a = 20;
+	cout << &a << endl;
+	
+	int v[5];
+	cout << v << endl;
+	cout << &v << endl;
+	cout << &v[0] << endl;
+	
+	return 0;
 }
